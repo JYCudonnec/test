@@ -1,0 +1,294 @@
+/* App.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Pour Firefox */
+html {
+  scrollbar-width: none; /* Firefox 64 */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Pour Chrome, Safari et Edge */
+html::-webkit-scrollbar {
+  display: none;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+}
+header {
+  /* position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  color: white;
+  background-color: rgb(24, 25, 27);
+  width: 100%;
+  margin: 0;
+  position: sticky;
+  top: 0;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  z-index: 13;
+  line-height: 1.2;
+  height: 35px;
+}
+hr {
+  margin: 10px 30px;
+}
+.header-title {
+  text-align: center;
+  color: white;
+  width: 100%;
+  height: 35px;
+  line-height: 2;
+}
+.header-options {
+  width: 300px;
+  display: flex;
+}
+.options-menu {
+  display: flex;
+  width: 100%;
+  height: 35px;
+}
+.options-item {
+  color: white;
+  background-color: rgb(24, 25, 27);
+  width: 75px;
+  font-size: 1.6em;
+  text-align: center;
+  color: white;
+}
+.options-item:hover {
+  background-color: rgb(208, 208, 208);
+  cursor: pointer;
+  color: black;
+}
+.selected-option {
+  background-color: rgb(145, 145, 145) !important;
+  color: black !important;
+}
+.options-window {
+  width: 300px;
+  display: block;
+  position: relative;
+  top: 35px;
+  left: -300px;
+  height: 300px;
+}
+.options-window-sub {
+  width:300px;
+  color: black;
+  background-color: white;
+}
+.sort-content label {
+  margin-left:5px;
+}
+.sort-scene {
+  display: flex;
+  font-size: 14px;
+  padding: 15px;
+}
+.sort-scene-column {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+nav h1 {
+  margin: 0 20px;
+  width: 120px;
+  text-align: center;
+}
+.main {
+  background-image: url("https://forum.hellfest.fr/uploads/default/original/1X/206db7e5235aacd96f50f2afd59af73690a3c24b.jpg");
+}
+.day {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+.day-with-group-details {
+  width: calc(100% - 300px);
+  margin-left: 300px;
+}
+@keyframes adjustWidth1 {
+  from {
+    width: 100%;
+    margin-left: 0
+  }
+
+  to {
+    width: calc(100% - 300px);
+    margin-left: 300px;
+  }
+  /* from { 
+    transform: translateX(0);
+    width: 100%;
+  }
+  to { 
+    transform: translateX(+300px);
+    width: calc(100% - 300px);
+  } */
+}
+
+@keyframes adjustWidth2 {
+  from {
+    width: calc(100% - 300px);
+    margin-left: 300px;
+  }
+
+  to {
+    width: 100%;
+    margin-left: 0
+  }
+}
+
+.scene-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 15%;
+  height: 100%;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 0;
+  border-radius: 5px;
+  /* flex: 1; */
+  /* max-width: 200px; */
+  padding-bottom: 5px;
+  min-width: 0;
+}
+.scene-image {width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: 5px;
+ }
+.scene-column h3 {text-align: center;
+  color: white;
+  white-space: nowrap !important;
+  overflow: hidden;
+  margin: 5px auto;
+}
+.scene-column-MAINSTAGE1 {
+  background-color: #0055a5;
+}
+.scene-column-MAINSTAGE2 {
+  background-color: #a6a19b;
+}
+.scene-column-WARZONE {
+  background-color: #949b1a;
+}
+.scene-column-VALLEY {
+  background-color: #ce7c19;
+}
+.scene-column-ALTAR {
+  background-color: #dc2829;
+}
+.scene-column-TEMPLE {
+  background-color: #93a7b0;
+}
+.band-MAINSTAGE1 {
+  background-color: #9eaad3;
+}
+.band-MAINSTAGE2 {
+  background-color: #d4d2cf;
+}
+.band-WARZONE {
+  background-color: #cecb93;
+}
+.band-VALLEY {
+  background-color: #eabe97;
+}
+.band-ALTAR {
+  background-color: #f19e9e;
+}
+.band-TEMPLE {
+  background-color: #cbd4d8;
+}
+.scene-bands {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 0;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient( to bottom, rgba(255,255,255,0.1), rgba(255,255,255,0.1) 50%, transparent 50%, transparent);
+  /* opacity: 50%; */
+  /* background-size: 13% 13%; */
+  background-size: 13% 120px;
+  /* background-position: 3.571% 3.571%; */
+  height: 960px;
+}
+.band-container {
+  padding:0;
+  margin: 0;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 92%;
+  border: 1px solid #000000;
+  border-radius: 5px;;
+  font-size: 0.5em;
+  overflow: hidden;
+  align-items: center;
+}
+.hours {
+  position: absolute;
+  font-size: 0.1em;
+  left: 40%;
+  color: white;
+  opacity: 0.7
+}
+.group-details {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  animation: slide-in 0.5s forwards;
+  z-index: 10;
+  background-color: white;
+  width: 300px;
+}
+.group-details.closing {
+  animation: slide-out 0.5s forwards;
+}
+@keyframes slide-in {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+@keyframes slide-out {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
